@@ -18,10 +18,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
   });
   
-  galleryList.addEventListener('click', (event) => {
-    event.preventDefault(); // Відміна дії переходу за посиланням
-    lightbox.open(event.target.closest('a'));
-  });
+ 
 
 
 

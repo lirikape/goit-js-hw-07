@@ -39,6 +39,7 @@ function createGalleryItem({ preview, original, description }) {
     const handleEscKey = (e) => {
       if (e.key === 'Escape') {
         instance.close();
+        document.removeEventListener('keydown', handleEscKey);
       }
     };
   
@@ -48,7 +49,7 @@ function createGalleryItem({ preview, original, description }) {
       }
     });
   
-    window.addEventListener('keydown', handleEscKey);
+    document.addEventListener('keydown', handleEscKey);
   });
  
 
